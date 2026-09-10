@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service         # '네트워크 연결(서비스)'
+metadata:             # 1. 기본 정보 설정
+  name: bgd           # 서비스 고정이름(도메인 주소)
+  namespace: bgd      # bgd라는 가상의 독립공간(네임스페이스) 안에서 서비스 생성
+  labels:
+    app: bgd          # deployment의 label과 일치
+spec:
+  selector:           # 2. 목적지 지정
+    app: bgd
+  ports:
+  - protocol: TCP     # 인터넷 통신 방식: TCP 프로토콜
+    port: 8080
+    targetPort: 8080  # Pod 내부에서 열려있는 포트번호이며, 서비스가 받은 요청을 8080 포트로 토스한다.
