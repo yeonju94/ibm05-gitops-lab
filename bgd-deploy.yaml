@@ -16,10 +16,10 @@ spec:
       labels:
         app: bgd    # 서비스의 label과 일치, matchLabels와 일치
       creationTimestamp: null
-  spec:
-    containers:
-    - name: bgd
-      image: quay.io/rhdevelopers/bgd:1.0.0
-      env:
-      - name: COLOR
-      value: "blue"
+    spec:
+      containers:
+      - name: bgd
+        image: quay.io/rhdevelopers/bgd:1.0.0
+        env:
+        - name: COLOR
+          value: "blue"
