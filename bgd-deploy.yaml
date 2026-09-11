@@ -6,7 +6,7 @@ metadata:
   labels:
     app: bgd
 spec:
-  replicas: 1
+  replicas: 3   # 1에서 3으로 수정
   selector:
     matchLabels:
       app: bgd
@@ -22,4 +22,4 @@ spec:
         image: quay.io/rhdevelopers/bgd:1.0.0
         env:
         - name: COLOR
-          value: "blue"
+          value: "red"  # blue -> red
