@@ -10,4 +10,4 @@ resources:
 images:
 - name: yeonju94/hello-app
   newName: yeonju94/hello-app
-  newTag: 9af1f58
+  newTag: 0f1234d
