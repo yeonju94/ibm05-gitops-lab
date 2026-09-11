@@ -82,4 +82,5 @@ jobs:
 
           git add ./springboot-app/hello/k8s/kustomization.yaml
           git commit -m "Update image tag for hello-app to ${{ steps.vars.outputs.sha }}"
+          git pull --rebase origin main
           git push
