@@ -47,7 +47,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      # 6. Docker 이미지 빌드 및 푸시[특히 민감해서 코드 뒤 주석다는거 금지, 탭키 금지]
+      # 6. Docker 이미지 빌드 및 푸시
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
@@ -82,5 +82,4 @@ jobs:
 
           git add ./springboot-app/hello/k8s/kustomization.yaml
           git commit -m "Update image tag for hello-app to ${{ steps.vars.outputs.sha }}"
-          git pull --rebase origin main
           git push
